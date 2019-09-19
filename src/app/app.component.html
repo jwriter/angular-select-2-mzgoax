@@ -1,0 +1,27 @@
+<select [(ngModel)]="property.manager" >  
+  <option *ngFor="let manager of managers" [ngValue]="manager">{{manager.name}}</option>
+</select>
+
+<br/>
+sn: {{selectedName}}
+<br/>
+pmn: {{property.manager.name}}
+
+<br/>
+
+<table>
+  <tr *ngFor="let person of persons">
+    <td>
+      {{person.Name}}
+    </td>
+    <td>
+      <select [(ngModel)]="person.Sex" >  
+        <option *ngFor="let sex of sexes" [ngValue]="sex">{{sex}}</option>
+      </select>
+    </td>
+  </tr>
+</table>
+
+<ul>
+  <li *ngFor="let person of persons">{{person.Name}} -> {{person.Sex}}</li>
+</ul>
